@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		083196D99C7AB36AF47F0A5B /* libPods-KeyGroupTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE7675FCB123E80547D15FC /* libPods-KeyGroupTest.a */; };
 		3A09C18B214E938400FBB282 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A09C18A214E938400FBB282 /* AppDelegate.m */; };
 		3A09C18E214E938400FBB282 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A09C18D214E938400FBB282 /* ViewController.m */; };
 		3A09C191214E938400FBB282 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A09C18F214E938400FBB282 /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A82AB2AFF8BA42E08A7F000 /* Pods-KeyGroupTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyGroupTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeyGroupTest/Pods-KeyGroupTest.release.xcconfig"; sourceTree = "<group>"; };
+		1FE7675FCB123E80547D15FC /* libPods-KeyGroupTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KeyGroupTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A09C186214E938400FBB282 /* KeyGroupTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyGroupTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A09C189214E938400FBB282 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3A09C18A214E938400FBB282 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		3A09C195214E938500FBB282 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A09C197214E938500FBB282 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A09C198214E938500FBB282 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		463DBE94220CDEC6526D98AE /* Pods-KeyGroupTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeyGroupTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeyGroupTest/Pods-KeyGroupTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				083196D99C7AB36AF47F0A5B /* libPods-KeyGroupTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		181D05E25127C36909C43674 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				463DBE94220CDEC6526D98AE /* Pods-KeyGroupTest.debug.xcconfig */,
+				1A82AB2AFF8BA42E08A7F000 /* Pods-KeyGroupTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		3A09C17D214E938400FBB282 = {
 			isa = PBXGroup;
 			children = (
 				3A09C188214E938400FBB282 /* KeyGroupTest */,
 				3A09C187214E938400FBB282 /* Products */,
+				181D05E25127C36909C43674 /* Pods */,
+				9F094A4A357CA3F7C0C564DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +87,14 @@
 			path = KeyGroupTest;
 			sourceTree = "<group>";
 		};
+		9F094A4A357CA3F7C0C564DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FE7675FCB123E80547D15FC /* libPods-KeyGroupTest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A09C19C214E938500FBB282 /* Build configuration list for PBXNativeTarget "KeyGroupTest" */;
 			buildPhases = (
+				D20F00C3A743D3C296A76EC1 /* [CP] Check Pods Manifest.lock */,
 				3A09C182214E938400FBB282 /* Sources */,
 				3A09C183214E938400FBB282 /* Frameworks */,
 				3A09C184214E938400FBB282 /* Resources */,
+				1882DBCEA862D33895BFE39A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,6 +161,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1882DBCEA862D33895BFE39A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KeyGroupTest/Pods-KeyGroupTest-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KeyGroupTest/Pods-KeyGroupTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D20F00C3A743D3C296A76EC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KeyGroupTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3A09C182214E938400FBB282 /* Sources */ = {
@@ -281,11 +358,13 @@
 		};
 		3A09C19D214E938500FBB282 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 463DBE94220CDEC6526D98AE /* Pods-KeyGroupTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38PR5BQU6U;
 				INFOPLIST_FILE = KeyGroupTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,11 +377,13 @@
 		};
 		3A09C19E214E938500FBB282 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A82AB2AFF8BA42E08A7F000 /* Pods-KeyGroupTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 38PR5BQU6U;
 				INFOPLIST_FILE = KeyGroupTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
