@@ -13,19 +13,28 @@
 
 @interface ViewController () <GMSPlacePickerViewControllerDelegate>
 
+@property (strong, nonatomic) GMSPlacePickerViewController *placePickerViewController;
+
 @end
 
-@implementation ViewController {
-    GMSPlacePickerViewController *_placePickerViewController;
-}
+@implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self createPlacePicker];
+    [self configureButton];
+}
+
+#pragma mark - Methods
+
+- (void) createPlacePicker{
     GMSPlacePickerConfig *config = [[GMSPlacePickerConfig alloc] initWithViewport:nil];
-    _placePickerViewController = [[GMSPlacePickerViewController alloc] initWithConfig:config];
-    _placePickerViewController.delegate = self;
-    
+    self.placePickerViewController = [[GMSPlacePickerViewController alloc] initWithConfig:config];
+    self.placePickerViewController.delegate = self;
+}
+
+- (void) configureButton{
     NSString *titleButton = @"Start Test";
     
     UIButton *startButton = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -37,27 +46,16 @@
     
     startButton.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:startButton];
-    [NSLayoutConstraint constraintWithItem:startButton
-                                 attribute:NSLayoutAttributeCenterY
-                                 relatedBy:NSLayoutRelationEqual
-                                    toItem:self.view
-                                 attribute:NSLayoutAttributeCenterY
-                                multiplier:1
-                                  constant:8]
-    .active = YES;
-    [NSLayoutConstraint constraintWithItem:startButton
-                                 attribute:NSLayoutAttributeCenterX
-                                 relatedBy:NSLayoutRelationEqual
-                                    toItem:self.view
-                                 attribute:NSLayoutAttributeCenterX
-                                multiplier:1
-                                  constant:8]
-    .active = YES;
     
-}
+    [startButton.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor
+                                              constant:8.0].active = YES;
+    
+    [startButton.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor
+                                              constant:8.0].active = YES;
+    }
 
 - (void)showPlaces:(UIButton *)button {
-    [self presentViewController:_placePickerViewController animated:YES completion:nil];
+    [self presentViewController:self.placePickerViewController animated:YES completion:nil];
 }
 
 
