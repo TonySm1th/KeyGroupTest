@@ -17,8 +17,7 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    
+
     [self setupApiKeyForGMS:@"AIzaSyDa54yjYOFFLXwG3c-2oB-R1RMWrgckALY"];
     
     return YES;

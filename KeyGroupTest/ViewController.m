@@ -58,7 +58,6 @@
     [self presentViewController:self.placePickerViewController animated:YES completion:nil];
 }
 
-
 #pragma mark - GMSPlacePickerViewControllerDelegate
 
 - (void)placePicker:(GMSPlacePickerViewController *)viewController didPickPlace:(GMSPlace *)place {
